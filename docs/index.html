@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affitto Appartamento Roma - Menu a Scaletta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+        }
+        .menu-item {
+            background-color: #444;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            border-top: 1px solid #555;
+        }
+        .menu-item:hover {
+            background-color: #666;
+        }
+        .submenu {
+            display: none;
+            background-color: #555;
+            padding-left: 20px;
+        }
+        .submenu a {
+            background-color: #555;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .submenu a:hover {
+            background-color: #777;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Benvenuti a Casa Bamby</h1>
+        <p>Appartamenti in affitto a Roma – brevi e lunghi periodi</p>
+    </header>
+
+    <nav>
+        <div class="menu-item" onclick="toggleMenu('introduzione')">Introduzione</div>
+        <div id="introduzione" class="submenu">
+            <a href="#">Chi siamo</a>
+            <a href="#">I nostri appartamenti</a>
+        </div>
+
+        <div class="menu-item" onclick="toggleMenu('galleria')">Galleria</div>
+        <div id="galleria" class="submenu">
+            <a href="#">Appartamento 1</a>
+            <a href="#">Appartamento 2</a>
+            <a href="#">Appartamento 3</a>
+        </div>
+
+        <div class="menu-item" onclick="toggleMenu('news')">News</div>
+        <div id="news" class="submenu">
+            <a href="#">Novità di maggio 2025</a>
+            <a href="#">Nuovo appartamento disponibile</a>
+        </div>
+
+        <div class="menu-item" onclick="toggleMenu('contatti')">Contatti</div>
+        <div id="contatti" class="submenu">
+            <a href="#">Modulo di contatto</a>
+            <a href="#">Mappa</a>
+        </div>
+    </nav>
+
+    <footer>
+        &copy; 2025 Casa Bamby - Tutti i diritti riservati
+    </footer>
+
+    <script>
+        function toggleMenu(menuId) {
+            var submenu = document.getElementById(menuId);
+            // Toggle visibility of the submenu
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
